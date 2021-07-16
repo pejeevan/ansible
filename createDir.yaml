@@ -1,0 +1,11 @@
+---
+- name: Create Directory in Ubuntu...
+  hosts: all
+  become: yes
+  tasks:
+    - name: "Copy Filessss"
+      file:
+        path: /usr/lib/{{item}}
+        state: directory
+      loop:
+        - "jvm"
